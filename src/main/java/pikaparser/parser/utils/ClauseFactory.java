@@ -33,8 +33,8 @@ import java.util.BitSet;
 import java.util.Optional;
 
 import pikaparser.clause.Clause;
-import pikaparser.clause.aux.ASTNodeLabel;
-import pikaparser.clause.aux.RuleRef;
+import pikaparser.clause.utils.ASTNodeLabel;
+import pikaparser.clause.utils.RuleRef;
 import pikaparser.clause.nonterminal.First;
 import pikaparser.clause.nonterminal.FollowedBy;
 import pikaparser.clause.nonterminal.NotFollowedBy;

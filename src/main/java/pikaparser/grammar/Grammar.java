@@ -40,7 +40,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 import pikaparser.clause.Clause;
-import pikaparser.clause.aux.RuleRef;
+import pikaparser.clause.utils.RuleRef;
 import pikaparser.clause.terminal.Nothing;
 import pikaparser.clause.terminal.Terminal;
 import pikaparser.memotable.Match;

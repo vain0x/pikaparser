@@ -38,7 +38,7 @@ import java.util.TreeMap;
 
 import pikaparser.ast.LabeledClause;
 import pikaparser.clause.Clause;
-import pikaparser.clause.aux.RuleRef;
+import pikaparser.clause.utils.RuleRef;
 import pikaparser.clause.nonterminal.First;
 import pikaparser.clause.terminal.Terminal;
 import pikaparser.grammar.Rule;

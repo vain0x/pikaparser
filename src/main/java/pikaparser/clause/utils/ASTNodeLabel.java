@@ -27,23 +27,25 @@
 // CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 // DEALINGS IN THE SOFTWARE.
 //
-package pikaparser.clause.aux;
+package pikaparser.clause.utils;
 
+import pikaparser.ast.LabeledClause;
 import pikaparser.clause.Clause;
 import pikaparser.memotable.Match;
 import pikaparser.memotable.MemoKey;
 import pikaparser.memotable.MemoTable;
 
 /**
- * Placeholder clause for referring to another rule by name. These clauses are replaced with direct references to
- * the clauses they reference by name before parsing begins, in order to optimize parsing.
+ * Placeholder clause used to add an AST node label to the provided subclause. {@link ASTNodeLabel} clauses are
+ * removed from the grammar before parsing, and the node label and subclause are moved into a {@link LabeledClause}
+ * object for each subclause of a clause.
  */
-public class RuleRef extends Clause {
-    public String refdRuleName;
+public class ASTNodeLabel extends Clause {
+    public final String astNodeLabel;
 
-    public RuleRef(String refdRuleName) {
-        super(new Clause[0]);
-        this.refdRuleName = refdRuleName;
+    public ASTNodeLabel(String astNodeLabel, Clause clause) {
+        super(clause);
+        this.astNodeLabel = astNodeLabel;
     }
 
     @Override
@@ -59,7 +61,7 @@ public class RuleRef extends Clause {
     @Override
     public String toString() {
         if (toStringCached == null) {
-            toStringCached = refdRuleName;
+            toStringCached = astNodeLabel + ":(" + labeledSubClauses[0] + ")";
         }
         return toStringCached;
     }

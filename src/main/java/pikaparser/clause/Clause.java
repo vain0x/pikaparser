@@ -35,7 +35,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 import pikaparser.ast.LabeledClause;
-import pikaparser.clause.aux.ASTNodeLabel;
+import pikaparser.clause.utils.ASTNodeLabel;
 import pikaparser.clause.nonterminal.Seq;
 import pikaparser.clause.terminal.Nothing;
 import pikaparser.grammar.MetaGrammar;

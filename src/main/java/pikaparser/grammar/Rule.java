@@ -31,7 +31,7 @@ package pikaparser.grammar;
 
 import pikaparser.ast.LabeledClause;
 import pikaparser.clause.Clause;
-import pikaparser.clause.aux.ASTNodeLabel;
+import pikaparser.clause.utils.ASTNodeLabel;
 
 /** A grammar rule. */
 public class Rule {
